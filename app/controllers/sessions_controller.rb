@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     if params[:name] != ''
       session[:name]=params[:name]
       redirect_to '/'
-    elsif params[:name] == nil
+    elsif params[:name].empty?
       redirect_to '/login'
     end
   end 

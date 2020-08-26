@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     session[:name]=params[:name]
       redirect_to '/'
     else
-      redirect_to 'sessions#new'
+      redirect_to 'sessions#login'
   end 
   def destroy
     session.delete :name

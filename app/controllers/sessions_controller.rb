@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     session[:name]=params[:name]
       redirect_to '/'
     else
-      render :new
+      redirect_to new
   end 
   def destroy
     session.delete :name

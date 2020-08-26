@@ -2,8 +2,11 @@ class SessionsController < ApplicationController
   def new
   end
   def create
+    if params[:name] != ''
     session[:name]=params[:name]
-    redirect_to '/'
+      redirect_to '/'
+    else
+      render :new
   end 
   def destroy
     session.delete :name
